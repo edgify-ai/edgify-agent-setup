@@ -1,0 +1,20 @@
+################################
+# Edgify Agent Version: 1.15.2 #
+################################
+version: '3.8'
+services:      
+  edgify-agent:
+    restart: always
+    container_name: edgify-agent
+    image: 'edgify/edgify-agent:1.15.2'
+    env_file:
+      - edgify-agent.env
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:rw
+      - /edgify_agent/shared:/edgify_agent/shared
+      - ~/.docker/config.json:/root/.docker/config.json
+      #- /edgify_agent/config.json:/edgify_agent/setup-ui/data-collector/item_images/config.json
+      #- /edgify_agent/images:/edgify_agent/setup-ui/data-collector/item_images/images_pub
+    devices:
+      - /dev/video0:/dev/video0
+    network_mode: host
