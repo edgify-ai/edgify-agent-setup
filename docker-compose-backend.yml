@@ -1,16 +1,26 @@
-################################
-# Edgify Agent Version: 1.15.2 #
-################################
+##########################
+# Edgify Version: 1.10.0 #
+##########################
 version: '3.8'
 services:
   edgify-agent:
     restart: always
     container_name: edgify-agent
-    image: 'edgify/edgify-agent:1.15.2'
+    image: 'edgify/edgify-agent:1.10.0'
     env_file:
       - edgify-agent-backend.env
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:rw
       - /edgify_agent/shared:/edgify_agent/shared
       - ~/.docker/config.json:/root/.docker/config.json
-    network_mode: host
+    ports:
+      - '3000:3000'
+      - '8080:8080'
+      - '8090:8090'
+      - '50051:50051'
+    networks:
+      - edgify-network
+    
+networks:
+  edgify-network:
+    name: edgify-network
