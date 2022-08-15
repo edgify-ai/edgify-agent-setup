@@ -13,4 +13,5 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock:rw
       - /edgify_agent/shared:/edgify_agent/shared
       - ~/.docker/config.json:/root/.docker/config.json
+      - /edgify_agent/logs:/edgify_agent/logs
     network_mode: host
