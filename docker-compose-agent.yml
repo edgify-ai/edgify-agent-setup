@@ -13,6 +13,7 @@ services:
       - /edgify_agent/shared:/edgify_agent/shared
       - ~/.docker/config.json:/root/.docker/config.json
       - /edgify_agent/logs:/edgify_agent/logs
+      #- /edgify_agent/default_model:/edgify_agent/default_model
       #- /edgify_agent/config.json:/edgify_agent/setup-ui/data-collector/item_images/config.json
       #- /edgify_agent/images:/edgify_agent/setup-ui/data-collector/item_images/images_pub
     devices:
