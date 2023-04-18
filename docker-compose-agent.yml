@@ -1,11 +1,11 @@
-# Edgify Agent Version: ${EDGIFY_AGENT_VERSION}
+# Edgify Agent Version: 1.22.6
 
 version: '3.8'
 services:      
   edgify-agent:
     restart: always
     container_name: edgify-agent
-    image: 'edgify/edgify-agent:${EDGIFY_AGENT_VERSION}'
+    image: 'edgify/edgify-agent:1.22.6'
     env_file:
       - edgify-agent.env
     volumes:
