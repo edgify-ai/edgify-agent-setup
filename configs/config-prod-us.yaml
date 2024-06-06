@@ -1,0 +1,9 @@
+Agent:
+    version: 
+    web_server_port: 3000
+    reverse_proxy_server_port: 8090
+Api:
+    base_url: https://dashboard.prod-us.edgify.ai/api/v2/edge/
+    websocket_endpoint: dashboard.prod-us.edgify.ai
+    websocket_protocol: wss
+    websocket_path: /api/v2/websockets

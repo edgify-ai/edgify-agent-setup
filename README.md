@@ -5,12 +5,14 @@
     ```
     sudo mkdir -p /edgify_agent/shared/
     ```
-2. Place config.yaml file in the /edgify_agent/shared/ directory.
+2. Place the correct config-{environment}.yaml file in the /edgify_agent/shared/ directory.
+   "environment" can be staging/production/prod-us.
     ```
-    sudo cp config.yaml /edgify_agent/shared/
+    sudo cp /configs/config-{environment}.yaml /edgify_agent/shared/config.yaml
     ```
-3. Rename docker-compose-agent.yml or docker-compose-backed.yml to docker-compose.yml and run.
+3. Rename docker-compose-{type} to docker-compose.yml and run.
+   "type" is agent/backend.
     ```
-    sudo mv docker-compose-agent.yml docker-compose.yml
+    sudo mv docker-compose-{type}.yml docker-compose.yml
     sudo docker-compose up -d
     ```
