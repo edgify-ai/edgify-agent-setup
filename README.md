@@ -10,7 +10,7 @@
     ```
     sudo cp /configs/config-{environment}.yaml /edgify_agent/shared/config.yaml
     ```
-    > **[!NOTE]**
+    > **NOTE**
     > 
     > *environment* can be staging / production / prod-us."
 3. Rename docker-compose-__*type*__ to docker-compose.yml and run.
@@ -19,6 +19,6 @@
     sudo mv docker-compose-{type}.yml docker-compose.yml
     sudo docker-compose up -d
     ```
-    > **[!NOTE]**
+    > **NOTE**
     > 
     > *type* can be agent / backend."
