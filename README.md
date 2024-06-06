@@ -1,7 +1,6 @@
-# edgify-agent-setup
-Edgify Agent Setup
+# Edgify Agent Setup
 
-Instructions:
+# Instructions:
 1. Create /edgify_agent/shared/ directory.
     ```
     sudo mkdir -p /edgify_agent/shared/
