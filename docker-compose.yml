@@ -1,0 +1,15 @@
+# Edgify Agent Version: ${EDGIFY_AGENT_VERSION}
+
+version: '3.8'
+services:      
+  edgify-agent:
+    restart: always
+    container_name: edgify-agent
+    image: 'edgify/edgify-agent:${EDGIFY_AGENT_VERSION}'
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:rw
+      - /edgify_agent/shared:/edgify_agent/shared
+      - ~/.docker/config.json:/root/.docker/config.json
+      - /edgify_agent/logs:/edgify_agent/logs
+      - /dev:/dev:ro
+    network_mode: host
