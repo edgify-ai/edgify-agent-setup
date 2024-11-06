@@ -1,6 +1,3 @@
-# Edgify Agent Version: ${EDGIFY_AGENT_VERSION}
-
-version: '3.8'
 services:      
   edgify-agent:
     restart: always
@@ -12,4 +9,5 @@ services:
       - ~/.docker/config.json:/root/.docker/config.json
       - /edgify_agent/logs:/edgify_agent/logs
       - /dev:/dev:ro
+    privileged: true
     network_mode: host
